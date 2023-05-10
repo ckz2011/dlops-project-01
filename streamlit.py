@@ -55,10 +55,10 @@ class ContentBasedRecommender:
         print(f'The {rec_items} recommended songs for {song} are:')
         st.write(f'The {rec_items} recommended songs for {song} are:')
         for i in range(rec_items):
-            print(f"Number {i+1}:")
-            st.write(f"Number {i+1}:")
-            print(f"{recom_song[i][1]} by {recom_song[i][2]} with {round(recom_song[i][0], 3)} similarity score") 
-            st.write(f"{recom_song[i][1]} by {recom_song[i][2]} with {round(recom_song[i][0], 3)} similarity score")
+            print(f"Song {i+1}:")
+            st.write(f"Song {i+1}:")
+            print(f"{recom_song[i][1]} by {recom_song[i][2]} | {round(recom_song[i][0], 3)} similarity score") 
+            st.write(f"{recom_song[i][1]} by {recom_song[i][2]} | {round(recom_song[i][0], 3)} similarity score")
             print("--------------------")
             st.write("..........................")
         
@@ -76,14 +76,14 @@ recommedations = ContentBasedRecommender(similarities)
 
 recommendation = {
     "song": songs['song'].iloc[10],
-    "number_songs": 4 
+    "number_songs": 5 
 }
 
 recommedations.recommend(recommendation)
 
 recommendation2 = {
     "song": songs['song'].iloc[120],
-    "number_songs": 4 
+    "number_songs": 5 
 }
 
 # recommedations.recommend(recommendation2)
