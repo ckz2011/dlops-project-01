@@ -76,14 +76,14 @@ recommedations = ContentBasedRecommender(similarities)
 
 recommendation = {
     "song": songs['song'].iloc[10],
-    "number_songs": 5 
+    "number_songs": 4 
 }
 
 recommedations.recommend(recommendation)
 
 recommendation2 = {
     "song": songs['song'].iloc[120],
-    "number_songs": 5 
+    "number_songs": 4 
 }
 
 # recommedations.recommend(recommendation2)
